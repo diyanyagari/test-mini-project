@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from './firebase.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'game-rock-paper-scissors';
+
+  username = ""
+  enLogin = true;
+
+  constructor(
+    private fbService: FirebaseService
+  ) {
+  }
+
+  login() {
+    let data = (<HTMLInputElement>document.getElementById("input-name")).value
+    this.fbService.newUser(data);
+    this.enLogin = true;
+  }
 }

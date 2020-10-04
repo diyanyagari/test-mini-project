@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "game-rock-paper-scissors"
+    }
+  },
+  "defaultProject": "game-rock-paper-scissors",
+  "cli": {
+    "analytics": "5610f7d5-9843-4db9-8368-2792396eb316"
+  }
 }
